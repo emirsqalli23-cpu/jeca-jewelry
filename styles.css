@@ -76,6 +76,8 @@ nav.bar{display:flex;align-items:center;justify-content:space-between;height:84p
 .shot{aspect-ratio:4/5;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;gap:16px;color:var(--grey)}
 .shot svg{width:120px;height:120px;color:var(--gold)}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot:has(img){border:none;padding:0}
 .shot .ph-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grey-l);border:1px dashed #cdc6b8;padding:6px 14px}
 .car-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;
   background:transparent;border:1px solid var(--ink);color:var(--ink);font-size:18px;cursor:pointer;
