@@ -13,7 +13,7 @@
 <div class="promo">
   <span><b>Livraison offerte</b> dès 79 €</span>
   <span><b>Paiement en 3×</b> sans frais</span>
-  <span><b>Données en France</b> 🇫🇷</span>
+  <span><b>Données en France</b></span>
   <span><b>Garantie 2 ans</b> · SAV français</span>
 </div>
 
@@ -47,7 +47,7 @@
       <a href="a-propos.html">À propos</a>
       <a href="faq.html">FAQ</a>
     </div>
-    <a class="btn btn-sm" href="panier.html">Panier (1)</a>
+    <a class="btn btn-sm cart-link" href="panier.html">Panier</a>
   </nav>
 </header>
 
@@ -62,7 +62,7 @@
         <button data-src="img/canva-bracelet-detail.png" data-fin="or"><img src="img/canva-bracelet-detail.png" alt="Bracelet JECA Étoile or, détail"></button>
       </div>
       <div class="main">
-        <span class="wish" title="Ajouter aux favoris">♡</span>
+        <span class="wish" title="Ajouter aux favoris"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 5a5 5 0 0 1 9.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
         <img id="galimg" src="img/canva-bracelet-argent.png" alt="Bracelet JECA Étoile">
       </div>
     </div>
@@ -98,7 +98,7 @@
         <li>Données chiffrées et hébergées en France par Monaco Digital.</li>
       </ul>
 
-      <a class="btn" href="panier.html" style="margin-top:6px;width:100%;text-align:center">Ajouter au panier</a>
+      <button class="btn" id="addcart" type="button" style="margin-top:6px;width:100%;text-align:center">Ajouter au panier</button>
 
       <div class="reassure">
         <div class="r"><svg viewBox="0 0 24 24"><path d="M1 7h13v9H1zM14 10h4l3 3v3h-7zM6.5 19a2 2 0 100-4 2 2 0 000 4zM18 19a2 2 0 100-4 2 2 0 000 4z"/></svg><div><b>Livraison offerte dès 79 €</b><span>Expédié sous 72 h, suivi inclus</span></div></div>
@@ -193,6 +193,15 @@
     document.querySelectorAll('#plan .chip').forEach(x => x.classList.remove('sel'));
     c.classList.add('sel'); plan = c.dataset.plan; refresh();
   }));
+  document.getElementById('addcart').addEventListener('click', function () {
+    var img = document.getElementById('galimg').src;
+    var planPrice = plan.indexOf('9,99') >= 0 ? 9.99 : 6.99;
+    window.JECA.add({
+      name: 'Bracelet JECA Étoile', cat: 'Bracelet · enfant 4–12 ans',
+      finition: finition, price: prix, plan: plan, planPrice: planPrice,
+      img: img.replace(location.origin + '/', '').replace(location.origin, '')
+    });
+  });
 </script>
 
 
@@ -207,5 +216,6 @@
 (function(){var k='jeca_cc';if(!localStorage.getItem(k)){var b=document.getElementById('cookiebar');if(b){b.hidden=false;b.querySelectorAll('[data-cc]').forEach(function(x){x.onclick=function(){localStorage.setItem(k,x.dataset.cc);b.hidden=true;};});}}})();
 </script>
 
+<script src="cart.js" defer></script>
 </body>
 </html>

@@ -345,6 +345,7 @@ footer.ft .copy{border-top:1px solid var(--line);text-align:center;padding:24px;
 .cookiebar{position:fixed;left:18px;right:18px;bottom:18px;z-index:200;background:#fff;border:1px solid var(--line);
   box-shadow:0 18px 50px rgba(26,26,26,.16);padding:20px 24px;display:flex;gap:20px;align-items:center;
   flex-wrap:wrap;justify-content:center;max-width:1000px;margin:0 auto}
+.cookiebar[hidden]{display:none}
 .cookiebar p{font-size:13px;color:var(--charcoal);flex:1;min-width:240px;line-height:1.6;margin:0}
 .cookiebar p a{color:var(--gold);border-bottom:1px solid var(--gold)}
 .cookiebar .cb-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -390,3 +391,33 @@ footer.ft .copy{border-top:1px solid var(--line);text-align:center;padding:24px;
   .pdp{grid-template-columns:1fr;gap:34px}
   .gal{grid-template-columns:64px 1fr}
 }
+
+
+/* ===== Panier dynamique (cart.js) ===== */
+.cart .mini{width:64px;height:64px;border-radius:10px;overflow:hidden;background:var(--cream);flex:0 0 64px;display:flex;align-items:center;justify-content:center}
+.cart .mini img{width:100%;height:100%;object-fit:cover}
+.cart td{vertical-align:middle}
+.qtybox{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.qtybox button{width:28px;height:30px;border:0;background:#fff;cursor:pointer;font-size:16px;color:var(--ink)}
+.qtybox button:hover{background:var(--cream)}
+.qtybox span{min-width:30px;text-align:center;font-size:14px}
+.rm{border:0;background:none;cursor:pointer;color:var(--grey-l);font-size:16px;line-height:1;padding:6px}
+.rm:hover{color:#c0392b}
+.cart-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;flex-wrap:wrap;gap:10px}
+.link-del{border:0;background:none;cursor:pointer;color:#c0392b;font-size:13px;text-decoration:underline}
+.ship-block{margin:22px 0 0;border-top:1px solid var(--line);padding-top:16px}
+.ship-title{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--grey);margin-bottom:10px}
+.ship{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;cursor:pointer;transition:.15s}
+.ship:hover{border-color:var(--gold-l)}
+.ship.sel{border-color:var(--gold);background:#fbf8f2}
+.ship input{accent-color:var(--gold);flex:none}
+.ship .s-main{flex:1;display:flex;flex-direction:column;gap:2px}
+.ship .s-main b{font-size:14px}
+.ship .s-main small{font-size:12px;color:var(--grey)}
+.ship .s-price{font-weight:600;font-size:14px;color:var(--ink);white-space:nowrap}
+.trust-line{display:flex;gap:14px;justify-content:center;margin-top:16px;font-size:12px;color:var(--grey)}
+.empty-cart{text-align:center;padding:70px 20px 90px}
+.empty-cart h2{font-size:26px;margin-bottom:10px}
+.empty-cart .btn{margin-top:20px}
+.jeca-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:30px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:9999;pointer-events:none}
+.jeca-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
