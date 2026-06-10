@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colliers GPS enfant — JECA Kids | JECA Jewelry</title>
 <meta name="description" content="Colliers connectés JECA Kids : Médaillon, Lune, Trèfle. Géolocalisation et SOS dissimulés dans le pendentif. Fermoir magnétique de sécurité. Or ou argent, dès 89 €.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
 
 <header>
   <nav class="bar wrap">
-    <a class="logo" href="index.html">JECA<span>Jewelry</span></a>
+    <a class="logo" href="index.html"><img class="mark" src="favicon.svg" alt="">JECA<span>Jewelry</span></a>
     <div class="navlinks">
       <a href="index.html">Accueil</a>
       <span class="has-mega"><a href="bracelets.html" class="active">Bijoux</a>
@@ -122,10 +123,22 @@
     <div><span class="logo">JECA<span>Jewelry</span></span><p>Bijoux connectés de géolocalisation pour enfants. La sérénité se porte.</p></div>
     <div><h4>Gamme</h4><a href="bracelets.html">Bracelets</a><a href="colliers.html">Colliers</a><a href="boucles.html">Boucles d'oreilles</a></div>
     <div><h4>Marque</h4><a href="a-propos.html">À propos</a><a href="faq.html">FAQ</a><a href="panier.html">Panier</a></div>
-    <div><h4>Confiance</h4><a href="faq.html">Données &amp; RGPD</a><a href="faq.html">Garantie 2 ans</a><a href="faq.html">Livraison &amp; paiement</a></div>
+    <div><h4>Légal</h4><a href="cgv.html">CGV</a><a href="confidentialite.html">Confidentialité &amp; RGPD</a><a href="mentions-legales.html">Mentions légales</a><a href="cookies.html">Cookies</a></div>
   </div>
-  <div class="copy">© 2026 JECA Jewelry — Made in France · jecajewelry.fr · Projet académique</div>
+  <div class="copy">© 2026 JECA Jewelry — Made in France · Données hébergées en France (Monaco Digital) · jecajewelry.fr · Projet académique</div>
 </footer>
+
+
+<div class="cookiebar" id="cookiebar" hidden>
+  <p>Nous utilisons des cookies essentiels au fonctionnement du site. Avec votre accord, des cookies de mesure d'audience anonymisée peuvent être déposés. <a href="cookies.html">En savoir plus</a>.</p>
+  <div class="cb-actions">
+    <button class="cb-btn" data-cc="refuse">Refuser</button>
+    <button class="cb-btn primary" data-cc="accept">Accepter</button>
+  </div>
+</div>
+<script>
+(function(){var k='jeca_cc';if(!localStorage.getItem(k)){var b=document.getElementById('cookiebar');if(b){b.hidden=false;b.querySelectorAll('[data-cc]').forEach(function(x){x.onclick=function(){localStorage.setItem(k,x.dataset.cc);b.hidden=true;};});}}})();
+</script>
 
 </body>
 </html>

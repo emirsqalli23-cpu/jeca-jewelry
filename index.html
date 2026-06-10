@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JECA Jewelry — La sérénité se porte | Bijoux GPS pour enfants</title>
 <meta name="description" content="JECA Jewelry : bracelets, colliers et boucles d'oreilles connectés de géolocalisation pour enfants. GPS temps réel, SOS, zones de sécurité. Or & argent, conçu en France.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
 
 <header>
   <nav class="bar wrap">
-    <a class="logo" href="index.html">JECA<span>Jewelry</span></a>
+    <a class="logo" href="index.html"><img class="mark" src="favicon.svg" alt="">JECA<span>Jewelry</span></a>
     <div class="navlinks">
       <a href="index.html" class="active">Accueil</a>
       <span class="has-mega"><a href="bracelets.html">Bijoux</a>
@@ -230,7 +231,7 @@
       <div class="feature"><div class="ic"><svg viewBox="0 0 100 100"><use href="sprite.svg#i-gps"/></svg></div><h3>Géolocalisation</h3><p>Position en temps réel, précision urbaine de 5 à 10 m.</p></div>
       <div class="feature"><div class="ic"><svg viewBox="0 0 100 100"><use href="sprite.svg#i-sos"/></svg></div><h3>Bouton SOS</h3><p>L'enfant alerte ses parents d'une simple pression.</p></div>
       <div class="feature"><div class="ic"><svg viewBox="0 0 100 100"><use href="sprite.svg#i-zone"/></svg></div><h3>Zones de sécurité</h3><p>Notification dès qu'il entre ou sort d'une zone (école, maison).</p></div>
-      <div class="feature"><div class="ic"><svg viewBox="0 0 100 100"><use href="sprite.svg#i-france"/></svg></div><h3>Données en France</h3><p>Chiffrées et hébergées en France, conformité RGPD.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 100 100"><use href="sprite.svg#i-france"/></svg></div><h3>Données en France</h3><p>Chiffrées et hébergées en France par Monaco Digital, conformité RGPD.</p></div>
     </div>
   </div>
 </section>
@@ -258,9 +259,9 @@
     <div><span class="logo">JECA<span>Jewelry</span></span><p>Bijoux connectés de géolocalisation pour enfants. La sérénité se porte.</p></div>
     <div><h4>Gamme</h4><a href="bracelets.html">Bracelets</a><a href="colliers.html">Colliers</a><a href="boucles.html">Boucles d'oreilles</a></div>
     <div><h4>Marque</h4><a href="a-propos.html">À propos</a><a href="faq.html">FAQ</a><a href="panier.html">Panier</a></div>
-    <div><h4>Confiance</h4><a href="faq.html">Données &amp; RGPD</a><a href="faq.html">Garantie 2 ans</a><a href="faq.html">Livraison &amp; paiement</a></div>
+    <div><h4>Légal</h4><a href="cgv.html">CGV</a><a href="confidentialite.html">Confidentialité &amp; RGPD</a><a href="mentions-legales.html">Mentions légales</a><a href="cookies.html">Cookies</a></div>
   </div>
-  <div class="copy">© 2026 JECA Jewelry — Made in France · jecajewelry.fr · Projet académique</div>
+  <div class="copy">© 2026 JECA Jewelry — Made in France · Données hébergées en France (Monaco Digital) · jecajewelry.fr · Projet académique</div>
 </footer>
 
 <script>
@@ -302,6 +303,18 @@
     window.addEventListener('resize', onScroll);
     frame();
   })();
+</script>
+
+
+<div class="cookiebar" id="cookiebar" hidden>
+  <p>Nous utilisons des cookies essentiels au fonctionnement du site. Avec votre accord, des cookies de mesure d'audience anonymisée peuvent être déposés. <a href="cookies.html">En savoir plus</a>.</p>
+  <div class="cb-actions">
+    <button class="cb-btn" data-cc="refuse">Refuser</button>
+    <button class="cb-btn primary" data-cc="accept">Accepter</button>
+  </div>
+</div>
+<script>
+(function(){var k='jeca_cc';if(!localStorage.getItem(k)){var b=document.getElementById('cookiebar');if(b){b.hidden=false;b.querySelectorAll('[data-cc]').forEach(function(x){x.onclick=function(){localStorage.setItem(k,x.dataset.cc);b.hidden=true;};});}}})();
 </script>
 
 </body>
