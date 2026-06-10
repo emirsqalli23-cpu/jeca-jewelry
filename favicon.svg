@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7c87a"/>
+      <stop offset="0.5" stop-color="#c79a45"/>
+      <stop offset="1" stop-color="#9c7a3a"/>
+    </linearGradient>
+  </defs>
   <rect width="64" height="64" rx="13" fill="#1a1a1a"/>
-  <path d="M32 12 L37.5 26.5 L53 27 L40.8 36.5 L45 51.5 L32 42.5 L19 51.5 L23.2 36.5 L11 27 L26.5 26.5 Z"
-        fill="none" stroke="#b89a6b" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"
+        font-size="33" font-weight="400" letter-spacing="-1" fill="url(#g)">JC</text>
 </svg>

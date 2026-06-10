@@ -353,3 +353,40 @@ footer.ft .copy{border-top:1px solid var(--line);text-align:center;padding:24px;
 .cookiebar .cb-btn.primary{background:var(--ink);color:#fff}
 .cookiebar .cb-btn:hover{opacity:.82}
 @media(max-width:600px){.cookiebar{left:10px;right:10px;bottom:10px;padding:16px}}
+
+/* ===================================================================
+   FICHE PRODUIT — UX bijouterie (galerie vignettes + zoom, réassurance)
+   =================================================================== */
+.pdp{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;align-items:start;padding:56px 0}
+.gal{display:grid;grid-template-columns:76px 1fr;gap:16px}
+.gal .thumbs{display:flex;flex-direction:column;gap:12px}
+.gal .thumbs button{aspect-ratio:1;border:1px solid var(--line);background:var(--cream);padding:0;cursor:pointer;overflow:hidden;transition:.2s}
+.gal .thumbs button.sel{border-color:var(--ink)}
+.gal .thumbs button:hover{border-color:var(--gold)}
+.gal .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.gal .main{aspect-ratio:1;background:var(--cream);border:1px solid var(--line);overflow:hidden;position:relative;cursor:zoom-in}
+.gal .main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal .main:hover img{transform:scale(1.55)}
+.gal .main .wish{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;background:#fff;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--grey);font-size:16px;cursor:pointer;z-index:2}
+.gal .main .wish:hover{color:#c0392b;border-color:#c0392b}
+.pdp .instock{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#2b2b2b;margin:18px 0 2px}
+.pdp .instock .g{width:9px;height:9px;border-radius:50%;background:#36a85f}
+
+/* Réassurance (lignes type bijouterie) */
+.reassure{margin:24px 0 6px;border-top:1px solid var(--line)}
+.reassure .r{display:flex;gap:14px;align-items:center;padding:15px 2px;border-bottom:1px solid var(--line)}
+.reassure .r svg{width:22px;height:22px;color:var(--gold);flex:none;fill:none;stroke:var(--gold);stroke-width:1.6}
+.reassure .r b{font-size:13px;display:block;color:var(--ink)}
+.reassure .r span{font-size:12px;color:var(--grey)}
+
+/* Cross-sell */
+.xsell{border-top:1px solid var(--line);padding:70px 0 90px}
+.xsell .xhead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:34px}
+.xsell .xhead h2{font-size:26px}
+.xsell .xhead a{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+
+@media(max-width:880px){
+  .pdp{grid-template-columns:1fr;gap:34px}
+  .gal{grid-template-columns:64px 1fr}
+}
