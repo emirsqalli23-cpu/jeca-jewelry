@@ -245,3 +245,82 @@ footer.ft .copy{border-top:1px solid var(--line);text-align:center;padding:24px;
   footer.ft .wrap{grid-template-columns:1fr}
   .wrap{padding:0 22px}
 }
+
+/* ===================================================================
+   HERO SCROLL — démo technologique / application de géolocalisation
+   =================================================================== */
+.scrollhero{position:relative;height:175vh;background:linear-gradient(180deg,#fff 0%,var(--bg) 30%,var(--bg) 100%)}
+.sh-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;perspective:1300px;padding:70px 20px 24px;overflow:hidden}
+.sh-head{max-width:660px;text-align:center;margin-bottom:26px;will-change:transform,opacity}
+.sh-head h2{font-size:38px;margin:12px 0 12px;line-height:1.12}
+.sh-head h2 em{font-style:italic;color:var(--gold)}
+.sh-head p{color:var(--grey);font-size:16px;max-width:540px;margin:0 auto;line-height:1.7}
+.sh-card{width:100%;max-width:980px;margin:0 auto;border:8px solid #2b2b2b;border-radius:30px;
+  background:#1c1c1c;padding:10px;transform-style:preserve-3d;will-change:transform;
+  box-shadow:0 9px 20px #0000004a,0 37px 37px #00000042,0 84px 50px #00000026,0 149px 60px #0000000a}
+.sh-screen{height:clamp(360px,52vh,560px);border-radius:20px;overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;border:1px solid #333}
+
+/* App — barre */
+.appbar{display:flex;align-items:center;gap:10px;padding:13px 18px;background:var(--ink);color:#f2efe9;
+  font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.appbar .brand{font-family:Georgia,serif;letter-spacing:2px;text-transform:none;font-size:14px}
+.appbar .brand span{color:var(--gold)}
+.appbar .online{margin-left:auto;color:#7fd99a;font-size:11px;letter-spacing:.5px;text-transform:none}
+.appbar .online::before{content:"●";margin-right:5px;font-size:9px;vertical-align:middle}
+
+/* App — corps */
+.appbody{flex:1;display:grid;grid-template-columns:1.5fr 1fr;min-height:0}
+.appmap{position:relative;overflow:hidden;background:
+  repeating-linear-gradient(0deg,#eef1ee 0 1px,transparent 1px 46px),
+  repeating-linear-gradient(90deg,#eef1ee 0 1px,transparent 1px 46px),
+  linear-gradient(135deg,#eef3ef,#e7efe9)}
+.appmap .road{position:absolute;background:#fff;box-shadow:0 0 0 1px #e2e6e1}
+.appmap .road.r1{height:18px;width:160%;top:38%;left:-20%;transform:rotate(-14deg)}
+.appmap .road.r2{width:16px;height:160%;left:62%;top:-20%;transform:rotate(8deg)}
+.appmap .park{position:absolute;width:34%;height:30%;left:6%;bottom:8%;background:#dcebdb;border-radius:14px;opacity:.8}
+.appmap .zone{position:absolute;width:230px;height:230px;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%);
+  border:2px dashed var(--gold);background:rgba(156,122,74,.07)}
+.appmap .pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-100%);z-index:3}
+.appmap .pin svg{width:30px;height:38px;display:block;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.appmap .pulse{position:absolute;left:50%;bottom:-6px;width:16px;height:16px;border-radius:50%;
+  transform:translateX(-50%);background:rgba(156,122,74,.5);animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(156,122,74,.45)}100%{box-shadow:0 0 0 26px rgba(156,122,74,0)}}
+.appmap .maplabel{position:absolute;left:50%;top:calc(48% + 14px);transform:translateX(-50%);
+  background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:11.5px;
+  color:var(--ink);white-space:nowrap;box-shadow:0 6px 16px rgba(0,0,0,.10);font-weight:600}
+.appmap .maplabel b{color:var(--gold)}
+
+/* App — panneau */
+.apppanel{padding:18px 18px;display:flex;flex-direction:column;gap:13px;background:#fff;border-left:1px solid var(--line)}
+.apppanel .profile{display:flex;align-items:center;gap:12px}
+.apppanel .ava{width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;font-family:Georgia,serif;
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+.apppanel .profile b{display:block;font-family:Georgia,serif;font-size:16px;color:var(--ink)}
+.apppanel .profile span{font-size:12px;color:var(--grey)}
+.apppanel .statline{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink);
+  background:#f0f6f1;border:1px solid #d9e9dd;border-radius:8px;padding:9px 12px}
+.apppanel .statline .dotg{width:9px;height:9px;border-radius:50%;background:#36a85f;flex:none}
+.apppanel .metric{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--grey)}
+.apppanel .metric .bar{flex:1;height:7px;background:#eee;border-radius:6px;overflow:hidden}
+.apppanel .metric .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-l),var(--gold))}
+.apppanel .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin-top:2px}
+.apppanel .kpis>div{border:1px solid var(--line);border-radius:8px;padding:9px 4px}
+.apppanel .kpis b{display:block;font-family:Georgia,serif;font-size:16px;color:var(--ink)}
+.apppanel .kpis span{font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--grey)}
+.apppanel .zones{display:flex;gap:7px;flex-wrap:wrap}
+.apppanel .zchip{font-size:11px;border:1px solid var(--line);border-radius:30px;padding:5px 12px;color:var(--grey)}
+.apppanel .zchip.on{border-color:var(--gold);color:var(--gold)}
+.apppanel .sosbtn{margin-top:auto;border:1.5px solid #c0392b;color:#c0392b;background:#fff;border-radius:8px;
+  padding:11px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+.apppanel .sosbtn:hover{background:#c0392b;color:#fff}
+
+@media(max-width:760px){
+  .scrollhero{height:150vh}
+  .sh-head h2{font-size:28px}
+  .sh-card{border-width:6px}
+  .appbody{grid-template-columns:1fr;grid-template-rows:1.1fr 1fr}
+  .apppanel{border-left:none;border-top:1px solid var(--line);gap:10px}
+  .apppanel .kpis,.apppanel .metric{display:none}
+}

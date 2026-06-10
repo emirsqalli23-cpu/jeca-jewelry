@@ -50,6 +50,54 @@
   </nav>
 </header>
 
+<!-- HERO SCROLL — démo technologique / app de géolocalisation -->
+<section class="scrollhero" id="scrollhero">
+  <div class="sh-sticky">
+    <div class="sh-head" id="shHead">
+      <span class="eyebrow">La technologie qui veille</span>
+      <h2>Où qu'il soit, vous le <em>savez.</em></h2>
+      <p>Derrière chaque bijou JECA, une géolocalisation en temps réel. Visualisez la position de votre enfant, recevez une alerte s'il quitte une zone, et gardez le bouton SOS à portée — depuis l'application.</p>
+    </div>
+    <div class="sh-card" id="shCard">
+      <div class="sh-screen">
+        <div class="appbar">
+          <span class="brand">JECA<span>·</span> App</span>
+          Suivi en direct
+          <span class="online">En ligne</span>
+        </div>
+        <div class="appbody">
+          <div class="appmap">
+            <div class="road r1"></div>
+            <div class="road r2"></div>
+            <div class="park"></div>
+            <div class="zone"></div>
+            <div class="pin">
+              <svg viewBox="0 0 24 30"><path d="M12 0C6 0 1.5 4.5 1.5 10.5 1.5 18 12 30 12 30S22.5 18 22.5 10.5C22.5 4.5 18 0 12 0Z" fill="#9c7a4a"/><circle cx="12" cy="10.5" r="4" fill="#fff"/></svg>
+              <span class="pulse"></span>
+            </div>
+            <div class="maplabel"><b>Jade</b> · École Jean-Jaurès</div>
+          </div>
+          <div class="apppanel">
+            <div class="profile">
+              <span class="ava">J</span>
+              <div><b>Jade, 8 ans</b><span>Bracelet JECA Étoile · or</span></div>
+            </div>
+            <div class="statline"><span class="dotg"></span> Dans la zone de sécurité · École</div>
+            <div class="metric"><span>Batterie</span><div class="bar"><i style="width:78%"></i></div><span>78 %</span></div>
+            <div class="kpis">
+              <div><b>5 m</b><span>précision</span></div>
+              <div><b>30 s</b><span>mise à jour</span></div>
+              <div><b>SOS</b><span>prêt</span></div>
+            </div>
+            <div class="zones"><span class="zchip on">École</span><span class="zchip">Maison</span><span class="zchip">+ zone</span></div>
+            <button class="sosbtn" type="button">Bouton SOS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CARROUSEL HERO -->
 <section class="carousel" id="car">
   <div class="slides" id="slides">
@@ -228,6 +276,32 @@
   document.getElementById('next').onclick = () => go(i+1);
   document.getElementById('prev').onclick = () => go(i-1);
   render(); restart();
+
+  /* Hero scroll — reveal 3D (équivalent vanilla du composant ContainerScroll) */
+  (function(){
+    const sec = document.getElementById('scrollhero');
+    const card = document.getElementById('shCard');
+    const head = document.getElementById('shHead');
+    if(!sec || !card) return;
+    let ticking = false;
+    function frame(){
+      ticking = false;
+      const vh = window.innerHeight;
+      const travel = sec.offsetHeight - vh;
+      let p = travel > 0 ? (-sec.getBoundingClientRect().top) / travel : 0;
+      p = Math.max(0, Math.min(1, p));
+      const mobile = window.innerWidth <= 768;
+      const rot = 18 * (1 - p);
+      const scale = mobile ? (0.86 + 0.09 * p) : (1.04 - 0.04 * p);
+      card.style.transform = 'rotateX(' + rot.toFixed(2) + 'deg) scale(' + scale.toFixed(3) + ')';
+      head.style.transform = 'translateY(' + (-46 * p).toFixed(1) + 'px)';
+      head.style.opacity = (1 - p * 0.45).toFixed(2);
+    }
+    function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(frame); } }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    frame();
+  })();
 </script>
 
 </body>
