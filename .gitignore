@@ -1,1 +1,5 @@
 .vercel
+.claude-flow/
+**/.claude-flow/
+HANDOFF.md
+.DS_Store
