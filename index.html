@@ -236,12 +236,54 @@
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="quote">
+<!-- FILM / VIDÉO DÉMO -->
+<section class="film" id="film">
+  <div class="head">
+    <span class="lux-line"></span><br>
+    <span class="eyebrow">Le film</span>
+    <h2>JECA, en situation</h2>
+    <p>Le bijou, l'application de géolocalisation et la sérénité qu'elle apporte — en moins d'une minute.</p>
+  </div>
+  <div class="frame">
+    <video id="filmVideo" src="img/demo-app.mp4" poster="img/demo-app-poster.jpg"
+           autoplay muted loop playsinline preload="metadata"></video>
+    <button class="sound" id="soundBtn" type="button" aria-label="Activer le son">🔇 Activer le son</button>
+  </div>
+  <p class="cap">Démonstration · Bijou connecté &amp; application JECA</p>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section class="reviews" id="avis">
   <div class="wrap">
-    <div class="stars">★★★★★</div>
-    <blockquote>« Depuis qu'elle porte son collier JECA, je n'ai plus cette boule au ventre à la sortie de l'école. »</blockquote>
-    <div class="who">— Sophie, maman de deux enfants</div>
+    <div class="head">
+      <span class="lux-line"></span><br>
+      <span class="eyebrow">Avis clients</span>
+      <h2>Des milliers de parents rassurés</h2>
+      <div class="rating">
+        <span class="big">4,9</span>
+        <span class="col-r">
+          <span class="stars">★★★★★</span>
+          <small>sur 2 300+ familles équipées</small>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="rgrid">
+    <div class="rcard">
+      <div class="top"><span class="stars">★★★★★</span><span class="verif">Achat vérifié</span></div>
+      <blockquote>« Depuis qu'elle porte son collier JECA, je n'ai plus cette boule au ventre à la sortie de l'école. Et c'est un vrai bijou, elle l'adore. »</blockquote>
+      <div class="who"><span class="ava">S</span><div><b>Sophie L.</b><span>Maman de deux enfants · Lyon</span></div></div>
+    </div>
+    <div class="rcard">
+      <div class="top"><span class="stars">★★★★★</span><span class="verif">Achat vérifié</span></div>
+      <blockquote>« L'appli est claire, la position se met à jour en quelques secondes et l'alerte zone fonctionne parfaitement. Le bouton SOS rassure toute la famille. »</blockquote>
+      <div class="who"><span class="ava">K</span><div><b>Karim B.</b><span>Papa de Jade, 8 ans · Paris</span></div></div>
+    </div>
+    <div class="rcard">
+      <div class="top"><span class="stars">★★★★★</span><span class="verif">Achat vérifié</span></div>
+      <blockquote>« On a offert le bracelet Étoile en or pour son anniversaire. Discret, élégant, et données hébergées en France : exactement ce qu'on cherchait. »</blockquote>
+      <div class="who"><span class="ava">M</span><div><b>Marie & Thomas</b><span>Parents de Lucas, 6 ans · Nantes</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -315,6 +357,19 @@
 </div>
 <script>
 (function(){var k='jeca_cc';if(!localStorage.getItem(k)){var b=document.getElementById('cookiebar');if(b){b.hidden=false;b.querySelectorAll('[data-cc]').forEach(function(x){x.onclick=function(){localStorage.setItem(k,x.dataset.cc);b.hidden=true;};});}}})();
+</script>
+
+<script>
+(function(){
+  var v=document.getElementById('filmVideo'), b=document.getElementById('soundBtn');
+  if(!v||!b) return;
+  b.addEventListener('click', function(){
+    v.muted=!v.muted;
+    if(!v.muted){ v.play(); b.textContent='🔊 Couper le son'; }
+    else { b.textContent='🔇 Activer le son'; }
+  });
+  v.addEventListener('click', function(){ if(v.paused) v.play(); else v.pause(); });
+})();
 </script>
 
 <script src="cart.js" defer></script>

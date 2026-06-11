@@ -421,3 +421,41 @@ footer.ft .copy{border-top:1px solid var(--line);text-align:center;padding:24px;
 .empty-cart .btn{margin-top:20px}
 .jeca-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:30px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:9999;pointer-events:none}
 .jeca-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== FILM / VIDÉO DÉMO ===== */
+.film{background:var(--ink);color:#fff;text-align:center;padding:92px 0}
+.film .head{max-width:660px;margin:0 auto 40px}
+.film .eyebrow{color:var(--gold-l)}
+.film .lux-line{margin-bottom:18px}
+.film .head h2{color:#fff;font-size:36px;margin:8px 0;letter-spacing:.5px}
+.film .head p{color:#b7b2a8;font-size:16px;margin-top:10px}
+.film .frame{max-width:1000px;margin:0 auto;padding:14px;background:linear-gradient(155deg,#2c2820,#161616);
+  border:1px solid rgba(184,154,107,.38);border-radius:6px;box-shadow:0 34px 80px rgba(0,0,0,.5);position:relative}
+.film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:3px;background:#000;cursor:pointer}
+.film .sound{position:absolute;right:26px;bottom:28px;background:rgba(20,20,20,.72);color:#f0e2c4;border:1px solid rgba(184,154,107,.5);
+  border-radius:40px;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(4px);transition:.2s}
+.film .sound:hover{background:rgba(40,40,40,.9)}
+.film .cap{margin-top:20px;color:#8f8a80;font-size:11px;text-transform:uppercase;letter-spacing:2px}
+
+/* ===== AVIS CLIENTS ===== */
+.reviews{background:var(--cream);padding:96px 0;border-top:1px solid var(--line)}
+.reviews .head{margin-bottom:44px}
+.reviews .rating{display:inline-flex;align-items:center;gap:16px;margin-top:20px;
+  background:#fff;border:1px solid var(--line);border-radius:50px;padding:12px 26px}
+.reviews .rating .big{font-family:Georgia,serif;font-size:34px;color:var(--ink);line-height:1}
+.reviews .rating .col-r{text-align:left}
+.reviews .rating .stars{color:var(--gold);letter-spacing:3px;font-size:16px;display:block}
+.reviews .rating small{color:var(--grey);font-size:12px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.rcard{background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);padding:30px 26px;
+  text-align:left;display:flex;flex-direction:column;gap:14px}
+.rcard .top{display:flex;align-items:center;justify-content:space-between}
+.rcard .stars{color:var(--gold);letter-spacing:3px;font-size:14px}
+.rcard .verif{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;border:1px solid var(--line);padding:3px 8px;border-radius:20px}
+.rcard blockquote{font-family:Georgia,serif;font-style:italic;font-size:16px;line-height:1.6;color:var(--ink);flex:1}
+.rcard .who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+.rcard .who .ava{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--gold-l);
+  display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:17px;flex:none}
+.rcard .who b{display:block;font-family:Georgia,serif;font-weight:400;font-size:14px;color:var(--ink)}
+.rcard .who span{font-size:11.5px;color:var(--grey)}
+@media(max-width:880px){.rgrid{grid-template-columns:1fr;max-width:560px}.film .head h2,.reviews .head h2{font-size:30px}}
